@@ -1,0 +1,38 @@
+ body{
+   background: rgb(202, 242, 142);
+   margin: 0px;
+ }
+
+.banner {
+  position: relative;        /* Necesario para posicionar el texto */
+  width: 100vw;              /* Ancho total */
+  height: 400px;             /* Puedes ajustar la altura */
+  overflow: hidden;          /* Oculta si algo se sale */
+}
+
+.banner img {
+  width: 100%;
+  height: 70%;
+}
+
+.banner h1 {
+  position: absolute;
+  top: 1%;                   /* Centrado vertical */
+  left: 50%;                  /* Centrado horizontal */
+  transform: translate(-50%, -50%);
+  font-size: 250px;            /* Tamaño del texto */
+  font-weight: bold;
+  background: linear-gradient(to bottom, white, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Hace visible el degradado */
+  text-align: center;
+}
+
+.text {
+  text-align: center;       
+  font-size: 100px;         
+  font-weight: bold;
+  position: absolute;
+  top: 28%;                   /* Centrado vertical */
+  left: 9%;                  
+}
