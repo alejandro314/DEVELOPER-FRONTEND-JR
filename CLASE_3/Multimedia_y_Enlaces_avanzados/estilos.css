@@ -3,11 +3,12 @@
    margin: 0px;
  }
 
+/* ====== BANNER ====== */
 .banner {
-  position: relative;        /* Necesario para posicionar el texto */
-  width: 100vw;              /* Ancho total */
-  height: 400px;             /* Puedes ajustar la altura */
-  overflow: hidden;          /* Oculta si algo se sale */
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  overflow: hidden;
 }
 
 .banner img {
@@ -17,22 +18,147 @@
 
 .banner h1 {
   position: absolute;
-  top: 1%;                   /* Centrado vertical */
-  left: 50%;                  /* Centrado horizontal */
+  top: 6%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 250px;            /* Tamaño del texto */
+  font-size: 250px;
   font-weight: bold;
   background: linear-gradient(to bottom, white, transparent);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Hace visible el degradado */
+  -webkit-text-fill-color: transparent;
   text-align: center;
 }
 
+/* ====== TEXTO PRINCIPAL ====== */
 .text {
   text-align: center;       
   font-size: 100px;         
   font-weight: bold;
   position: absolute;
-  top: 28%;                   /* Centrado vertical */
-  left: 9%;                  
+  top: 35%;  /* antes estaba 28%, lo bajamos hacia la parte inferior */
 }
+
+
+/* ====== MENÚ PRINCIPAL ====== */
+.menu-principal {
+  display: flex;
+  justify-content: space-between; /* Izquierda: menú | Derecha: links */
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #004d00; /* Verde oscuro */
+  border-radius: 10px;
+}
+
+/* ====== MENÚ DESPLEGABLE IZQUIERDO ====== */
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-btn {
+  background-color: #008000; /* Verde base */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #006600; /* Verde más oscuro */
+}
+
+/* Contenedor del menú desplegable */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #008000;
+  min-width: 160px;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.menu-dropdown a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.menu-dropdown a:hover {
+  background-color: #006600;
+}
+
+/* Mostrar el menú al pasar el mouse */
+.menu-container:hover .menu-dropdown {
+  display: block;
+}
+
+/* ====== LINKS EXTRAS A LA DERECHA ====== */
+.extra-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  color: #aaffaa;
+}
+
+
+/* Contenedor principal del texto */
+main {
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente */
+  padding: 40px;             /* Espacio alrededor */
+}
+
+/* Texto dividido en dos columnas */
+.texto-dos-columnas {
+  width: 90%;                /* Controla el ancho total del texto */
+  column-count: 2;           /* Divide el texto en 2 columnas */
+  column-gap: 40px;          /* Espacio entre columnas */
+  text-align: justify;       /* Justifica el texto para que se vea parejo */
+  font-size: 18px;           /* Tamaño del texto */
+  line-height: 1.6;          /* Espaciado entre líneas */
+  color: #333;               /* Color del texto */
+  font-family: 'Arial', sans-serif;
+}
+
+iframe {
+  display: block;           /* Elimina comportamiento inline */
+  margin: 40px auto;        /* Centra horizontalmente */
+}
+
+audio {
+  width: 200px;            /* Hace el reproductor más pequeño */
+  opacity: 50%;            /* Le da un efecto de transparencia (0.8 = 80%) */
+  display: block;          /* Permite centrarlo si quieres */
+  border-radius: 10px;     /* Bordes redondeados (opcional) */
+}
+
+footer {
+  display: flex;              /* Permite alinear los elementos en fila */
+  align-items: center;        /* Centra verticalmente el contenido */
+  padding: 15px 30px;
+  background-color: #003300;  /* Fondo verde oscuro (opcional) */
+}
+
+footer audio {
+  width: 200px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+
+.dropdown a:hover {
+  color: #aaffaa;             /* Cambia el color al pasar el puntero */
+}
+
